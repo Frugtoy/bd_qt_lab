@@ -9,6 +9,8 @@ MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
+    signin_window = new signIn;
+    signin_window ->exec();
     ui->setupUi(this);
     connect(ui->admin,&QPushButton::clicked, this,&MainWindow::click);
     connect(ui->add,&QPushButton::clicked,this,&MainWindow::dialog);
