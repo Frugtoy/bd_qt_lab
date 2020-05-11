@@ -28,6 +28,7 @@ private:
     void createUI();
 private slots:
     void click();
+    void change();
  };
 
 #endif // MAINWINDOW_H
