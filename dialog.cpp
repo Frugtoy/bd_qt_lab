@@ -23,7 +23,7 @@ Dialog::Dialog(QWidget *parent, Dialog::Type type, int id) :
 }
 
 
-QString tableName = "students";
+QString tableName = "Student";
 void Dialog::onClick()
 {
     QString ex = "";
@@ -33,23 +33,24 @@ void Dialog::onClick()
         case change:
         query->exec("UPDATE "
                    + tableName + "SET" +
-                   " faculty =" + ui->comboBox->currentText() +
-                   " grp =" + ui->comboBox_2->currentText() +
-                   " name =" + ui->name->text() +
-                   " lastName=" + ui->lastName->text()); +
-                   ") WHERE id=" + id;
+                   " grp =" + ui->grp->currentText() +
+                   " firstName =" + ui->name->text() +
+                   " lastName=" + ui->lastName->text() +
+                   "middleName="+ ui->middleName->text());
          case add:
          query->exec("INSERT INTO "
                     + tableName +
-                    "(" + "faculty" +
-                    "," + "grp" +
-                    "," + "name" +
-                    "," + "lastName" +
+                    "(" + "grp" +
+                    "," + "name"+
+                    "," + "lastName"+
+                    "," + "middleName" +
+                    "," + "info" +
                     ") "+ " VALUES " +
-                    " ("+ ui->comboBox->currentText() +
-                    "," + ui->comboBox_2->currentText() +
+                    " ("+ ui->grp->currentText() +
                     "," + ui->name->text() +
                     "," + ui->lastName->text() +
+                    "," + ui->middleName->text() +
+                    "," + ui->info->text() +
                     ")");
 
             break;
