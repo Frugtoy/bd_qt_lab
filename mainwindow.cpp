@@ -55,10 +55,11 @@ MainWindow::MainWindow(QWidget *parent) :
              CYBERNETICA
 
 )"));
+    //INSERT INTO Student(groupId,firstName,lastName,middleName,info)  VALUES  ('КМБО-05-18','hh','rr','www','tyrtyrtytgrtyt')
 
    // select * from faculty
 
-    query.exec((R"(
+    query.exec(R"(
                 INSERT INTO Groups
                 (
                 facultyID,
@@ -72,7 +73,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
                 )
 
-                )"));
+                )");
 
     //query.exec(("CREATE TABLE students(id INTEGER PRIMARY KEY AUTOINCREMENT, faculty VARCHAR(20), grp VARCHAR(20), name VARCHAR(20), lastName VARCHAR(20));"));
      statusBar()->showMessage(query.lastError().text());

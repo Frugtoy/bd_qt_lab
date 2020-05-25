@@ -47,12 +47,12 @@ void Dialog::onClick()
                     "," + "middleName" +
                     "," + "info" +
                     ") "+ " VALUES " +
-                    " ("+ ui->grp->currentText() +
-                    "," + ui->name->text() +
-                    "," + ui->lastName->text() +
-                    "," + ui->middleName->text() +
-                    "," + ui->info->text() +
-                    ")");
+                    " ('"+ ui->grp->currentText() +
+                    "','" + ui->name->text() +
+                    "','" + ui->lastName->text() +
+                    "','" + ui->middleName->text() +
+                    "','" + ui->info->text() +
+                    "')");
 
             break;
     }
