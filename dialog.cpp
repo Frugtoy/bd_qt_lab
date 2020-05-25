@@ -30,18 +30,19 @@ void Dialog::onClick()
      QSqlQuery *query = new QSqlQuery();
     switch(type)
     {
-        case change:
+        /*case change:
         query->exec("UPDATE "
                    + tableName + "SET" +
                    " grp =" + ui->grp->currentText() +
                    " firstName =" + ui->name->text() +
                    " lastName=" + ui->lastName->text() +
                    "middleName="+ ui->middleName->text());
+        */
          case add:
          query->exec("INSERT INTO "
                     + tableName +
-                    "(" + "grp" +
-                    "," + "name"+
+                    "(" + "groupId" +
+                    "," + "firstName"+
                     "," + "lastName"+
                     "," + "middleName" +
                     "," + "info" +

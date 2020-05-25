@@ -50,12 +50,13 @@ MainWindow::MainWindow(QWidget *parent) :
              )"));
     query.exec((R"(
         INSERT INTO Faculty
-               (name)
+               name
                VALUES
-             (CYBERNETICA)
+             CYBERNETICA
 
 )"));
 
+   // select * from faculty
 
     query.exec((R"(
                 INSERT INTO Groups
@@ -66,7 +67,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
                 VALUES
                (
-                0
+                0,
                 КМБО-05-18,
 
                 )
